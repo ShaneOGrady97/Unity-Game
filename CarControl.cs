@@ -38,7 +38,7 @@ public class CarControl : MonoBehaviour
     }
 
     void FixedUpdate()
-    { // fixed update is more realistic physics
+    { 
 
         
         Forward = Input.GetAxis("Vertical");
@@ -78,15 +78,15 @@ public class CarControl : MonoBehaviour
         FR.transform.position = frv;
         FR.transform.rotation = frq;
 
-        Quaternion blq; //rotation of wheel collider
-        Vector3 blv; // position of wheel collider
-        WheelBL.GetWorldPose(out blv, out blq); // get wheel collider position and rotation
+        Quaternion blq; 
+        Vector3 blv; 
+        WheelBL.GetWorldPose(out blv, out blq); 
         BL.transform.position = blv;
         BL.transform.rotation = blq;
 
-        Quaternion brq; //rotation of wheel collider
-        Vector3 brv; // position of wheel collider
-        WheelBR.GetWorldPose(out brv, out brq); // get wheel collider position and rotation
+        Quaternion brq; 
+        Vector3 brv; 
+        WheelBR.GetWorldPose(out brv, out brq); 
         BR.transform.position = brv;
         BR.transform.rotation = brq;
     }
